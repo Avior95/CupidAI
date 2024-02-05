@@ -1,0 +1,8 @@
+{
+    "dbConfig": {
+      "url": "mongodb+srv://aviork9:Avior2468@cluster0.7022xct.mongodb.net/"
+    },
+    "jwt": "780y94563hj2y45wopiunj",
+    "file": "production"
+  }
+  
