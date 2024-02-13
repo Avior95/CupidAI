@@ -1,21 +1,27 @@
-import React from "react";
-import { StatusBar } from "expo-status-bar";
-import { StyleSheet, Text, View } from "react-native";
+// App.tsx
 
-export default function App() {
+import { NavigationContainer } from '@react-navigation/native';
+import { createNativeStackNavigator } from '@react-navigation/native-stack';
+
+import HomeScreen from './Screens/HomeScreen'; 
+import RegisterScreen from './Screens/RegisterScreen';
+import Navbar from './componant/Navbar';
+
+const Stack = createNativeStackNavigator();
+
+export default function App(navigation) {
+
   return (
-    <View style={styles.container}>
-      <Text>Open up App.tsx to start working on your app! TESTTT</Text>
-      <StatusBar style="auto" />
-    </View>
+    <NavigationContainer>
+      <Navbar 
+        onPressHome={() => navigation.navigate('Home')}
+        onPressRegister={() => navigation.navigate('Register')} 
+      />
+      
+      <Stack.Navigator>
+        <Stack.Screen name="Home" component={HomeScreen} />
+        <Stack.Screen name="Register" component={RegisterScreen} />
+      </Stack.Navigator>
+    </NavigationContainer>
   );
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: "#fff",
-    alignItems: "center",
-    justifyContent: "center",
-  },
-});
