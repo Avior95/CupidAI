@@ -1,13 +1,11 @@
-// import { StackScreenProps } from '@react-navigation/stack';
-// import Navbar from '../components/Navbar';
+// HomeScreen.tsx
 
-// interface Props extends StackScreenProps<any, 'Home'> {}
+import { Text } from 'react-native';
 
-// export default function HomeScreen({ navigation }: Props) {
-//   return (
-//     <Navbar
-//       onPressHome={() => {}}
-//       onPressRegister={() => navigation.navigate('Register')} 
-//     />
-//   );
-// }
+const HomeScreen = () => {
+  return (
+    <Text>Welcome to CupidAI!</Text> 
+  );
+}
+
+export default HomeScreen;
